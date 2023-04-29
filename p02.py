@@ -433,7 +433,7 @@ df = querying_pagination(tx_sql)
 tx_sql
 
 
-df.to_csv('out.csv')
+# df.to_csv('out.csv')
 
 
 # print(f'df: {df}')
