@@ -4,3 +4,4 @@ pandas_datareader==0.10.0
 python_dateutil==2.8.2
 Requests>=2.19.0
 shroomdk==1.0.2
+gunicorn==20.1.0
