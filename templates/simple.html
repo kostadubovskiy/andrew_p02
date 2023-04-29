@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Addresses:</h3>
+    {% for address in addresses %}
+        <p> {{ address }} </p>
+    {% endfor %}
+    <!-- <button></button> -->
+    <form action="/">
+    <input type="text" name="addresses" placeholder="Input wallet addresses separated by commas">
+    <input type="submit" value="Submit">
+    </form>
+    {% for table in tables %}
+                {{titles[loop.index]}}
+                {{ table|safe }}
+    {% endfor %}
+</body>
+</html>
