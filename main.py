@@ -48,8 +48,8 @@ def home():
     """
     df = querying_pagination(tx_sql)
     res_df = parsing_swaps(addresses, df)
-  print(addresses)
-  return render_template('simple.html',  tables=[res_df.to_html(classes='data')], addresses=addresses, titles=res_df.columns.values)
+    # print(f'res_df: {res_df}')
+  return render_template('simple.html',  tables=[res_df.to_html(classes='data', header="true")])
 
 
 
