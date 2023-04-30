@@ -11,18 +11,18 @@
 <body class="bg-dark">
     <h3 class="text-light mt-2 mb-2 ms-2">Addresses:</h3>
     {% for address in addresses %}
-        <p> {{ address }} </p>
+        <p class="text-light"> {{ address }} </p>
     {% endfor %}
     <!-- <button></button> -->
     <form class="mt-2 mb-2 ms-2" action="/">
-    <input class="form-control mt-2 mb-2 ms-2" type="text" name="addresses" placeholder="Input wallet addresses separated by commas">
+    <input class="form-control mt-2 mb-2 w-50" type="text" name="addresses" placeholder="Input wallet addresses separated by commas">
     <input class="btn btn-primary" type="submit" value="Submit">
     </form>
     {% for table in tables %}
                 {{ table|safe }}
     {% endfor %}
 
-    <table class="table table-dark">
+    <table class="table table-dark ms-5 me-5">
         <tr>
             {% for col in column_names %}
             <th>{{col}}</th>
