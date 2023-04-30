@@ -9,14 +9,14 @@
               href="../static/style.css">
 </head>
 <body class="bg-dark">
-    <h3>Addresses:</h3>
+    <h3 class="text-light mt-2 mb-2 ms-2">Addresses:</h3>
     {% for address in addresses %}
         <p> {{ address }} </p>
     {% endfor %}
     <!-- <button></button> -->
-    <form action="/">
-    <input type="text" name="addresses" placeholder="Input wallet addresses separated by commas">
-    <input type="submit" value="Submit">
+    <form class="mt-2 mb-2 ms-2" action="/">
+    <input class="form-control" type="text" name="addresses" placeholder="Input wallet addresses separated by commas">
+    <input class="btn btn-primary" type="submit" value="Submit">
     </form>
     {% for table in tables %}
                 {{ table|safe }}
