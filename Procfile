@@ -1,2 +1,2 @@
 # Procfile
-web: gunicorn main:app --timeout 10
+web: gunicorn main:app
