@@ -23,10 +23,10 @@ tx_sql = f"""
     WHERE ethereum.core.ez_dex_swaps.origin_from_address in ({where1_str})
     ORDER by block_timestamp ASC
 """
-# df = querying_pagination(tx_sql)
-# print(f'p02.df: {p02.df}')
-# res_df = parsing_swaps(addresses, df)
-# print(f'res_df: {res_df}')
+df = querying_pagination(tx_sql)
+print(f'p02.df: {p02.df}')
+res_df = parsing_swaps(addresses, df)
+print(f'res_df: {res_df}')
 
 @app.route('/', methods=("POST", "GET"))
 def home():
@@ -46,10 +46,10 @@ def home():
         WHERE ethereum.core.ez_dex_swaps.origin_from_address in ({where1_str})
         ORDER by block_timestamp ASC
     """
-    # df = querying_pagination(tx_sql)
-    # res_df = parsing_swaps(addresses, df)
-  # print(addresses)
-  return render_template('simple.html',  tables=[], addresses=addresses, titles=[])# render_template('simple.html',  tables=[res_df.to_html(classes='data')], addresses=addresses, titles=res_df.columns.values)
+    df = querying_pagination(tx_sql)
+    res_df = parsing_swaps(addresses, df)
+  print(addresses)
+  return render_template('simple.html',  tables=[res_df.to_html(classes='data')], addresses=addresses, titles=res_df.columns.values)
 
 
 
